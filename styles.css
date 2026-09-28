@@ -21,18 +21,14 @@ h1, h2, h3, .marca { font-family: "Unbounded", system-ui, sans-serif; font-weigh
 a { color: var(--acento); }
 
 /* ---------- Barra de navegación ---------- */
+/* La barra queda en la parte superior de la página y se va con el scroll (no tapa el texto) */
 .barra {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  background: rgba(0, 0, 0, .94);
+  position: relative;
+  z-index: 1030; /* para que la lista del buscador quede sobre el contenido */
+  background: #000;
   border-bottom: 1px solid var(--borde);
   min-height: var(--alto-barra);
 }
-/* Si el menú se abre en móvil, que haga scroll dentro de sí mismo y no tape la página */
-.barra .navbar-collapse { max-height: calc(100vh - var(--alto-barra)); overflow-y: auto; }
 .marca { color: var(--acento); font-size: 1.05rem; text-shadow: 0 0 14px rgba(196, 181, 253, .55); }
 .marca:hover { color: #ddd3ff; }
 .barra .nav-link { color: var(--texto-suave); }
@@ -81,7 +77,7 @@ a { color: var(--acento); }
 
 /* ---------- Portada ---------- */
 .portada {
-  padding: calc(var(--alto-barra) + 4.5rem) 0 3.5rem;
+  padding: 3.5rem 0 3.5rem;
   text-align: center;
 }
 .titulo-principal {
@@ -109,12 +105,12 @@ a { color: var(--acento); }
   margin-bottom: 1rem;
 }
 .introduccion { max-width: 46rem; margin: 0 auto; padding: 2rem 0 3rem; }
-.grupo { padding: 3rem 0 1rem; scroll-margin-top: var(--alto-barra); }
+.grupo { padding: 3rem 0 1rem; scroll-margin-top: 1rem; }
 .descripcion-grupo { max-width: 46rem; color: var(--texto-suave); margin-bottom: 2rem; }
 
 /* ---------- Planeta ---------- */
 .planeta {
-  scroll-margin-top: calc(var(--alto-barra) + 10px);
+  scroll-margin-top: 1rem;
   padding: 2.5rem 0;
   border-top: 1px solid var(--borde);
   border-radius: 1rem;
