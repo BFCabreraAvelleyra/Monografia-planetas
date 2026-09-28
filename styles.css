@@ -22,11 +22,17 @@ a { color: var(--acento); }
 
 /* ---------- Barra de navegación ---------- */
 .barra {
-  background: rgba(0, 0, 0, .88);
-  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  background: rgba(0, 0, 0, .94);
   border-bottom: 1px solid var(--borde);
   min-height: var(--alto-barra);
 }
+/* Si el menú se abre en móvil, que haga scroll dentro de sí mismo y no tape la página */
+.barra .navbar-collapse { max-height: calc(100vh - var(--alto-barra)); overflow-y: auto; }
 .marca { color: var(--acento); font-size: 1.05rem; text-shadow: 0 0 14px rgba(196, 181, 253, .55); }
 .marca:hover { color: #ddd3ff; }
 .barra .nav-link { color: var(--texto-suave); }
