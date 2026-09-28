@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monografía del Sistema Solar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600&family=Figtree:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body data-bs-theme="dark">
+
+  <nav class="navbar navbar-expand-lg fixed-top barra">
+    <div class="container">
+      <a class="navbar-brand marca" href="#inicio">Sistema Solar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#interiores">Planetas interiores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#exteriores">Planetas exteriores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#enanos">Planetas enanos</a></li>
+        </ul>
+
+        <form class="buscador position-relative" id="formBuscador" role="search" autocomplete="off">
+          <input class="form-control" type="search" id="buscador" placeholder="Buscar un planeta…"
+                 aria-label="Buscar un planeta" aria-controls="resultados" aria-autocomplete="list">
+          <div class="list-group resultados d-none" id="resultados" role="listbox"></div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <header class="portada" id="inicio">
+    <div class="container">
+      <h1 class="titulo-principal">Monografía del Sistema Solar</h1>
+      <p class="lead">
+        Nuestro sistema solar tiene ocho planetas: Mercurio, Venus, la Tierra, Marte, Júpiter, Saturno,
+        Urano y Neptuno. Además, hay cinco planetas enanos reconocidos oficialmente: Ceres, Plutón,
+        Haumea, Makemake y Eris.
+      </p>
+      <div class="row g-4 justify-content-center cifras">
+        <div class="col-6 col-md-3"><span class="cifra">8</span><span>planetas</span></div>
+        <div class="col-6 col-md-3"><span class="cifra">5</span><span>planetas enanos</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="introduccion">
+      <h2 class="titulo-seccion">¿Qué es un planeta?</h2>
+      <p>
+        La palabra «planeta» viene del griego antiguo <em>planētēs</em>, que significa «errante». Una definición
+        moderna del diccionario Merriam-Webster lo describe como cualquiera de los grandes cuerpos que giran
+        alrededor del Sol en el sistema solar.
+      </p>
+      <p>
+        En 2006, la Unión Astronómica Internacional (UAI), el grupo de astrónomos que nombra los objetos del
+        sistema solar, acordó su propia definición de «planeta». Esa definición provocó la famosa «degradación» de
+        Plutón a planeta enano y redujo el censo del sistema solar de nueve planetas a ocho.
+      </p>
+    </section>
+
+    <section id="interiores" class="grupo">
+      <h2 class="titulo-seccion">Planetas interiores</h2>
+      <p class="descripcion-grupo">
+        Los primeros cuatro planetas desde el Sol son Mercurio, Venus, la Tierra y Marte. Se conocen como planetas
+        terrestres porque tienen superficie sólida.
+      </p>
+      <div id="lista-interiores"></div>
+    </section>
+
+    <section id="exteriores" class="grupo">
+      <h2 class="titulo-seccion">Planetas exteriores</h2>
+      <p class="descripcion-grupo">
+        Los planetas gigantes del sistema solar exterior no tienen superficie dura: son gases en remolino sobre un
+        núcleo. Júpiter y Saturno son gigantes gaseosos; Urano y Neptuno son gigantes de hielo.
+      </p>
+      <div id="lista-exteriores"></div>
+    </section>
+
+    <section id="enanos" class="grupo">
+      <h2 class="titulo-seccion">Planetas enanos</h2>
+      <p class="descripcion-grupo">
+        Entre los planetas enanos están Plutón, Ceres, Makemake, Haumea y Eris. Ceres es el único del sistema solar
+        interior: se encuentra en el cinturón principal de asteroides, entre Marte y Júpiter.
+      </p>
+      <div id="lista-enanos"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="container">
+      <p class="mb-1">
+        Información: <a href="https://science.nasa.gov/solar-system/planets/" target="_blank" rel="noopener">NASA Science – About the Planets</a>
+        (traducida y adaptada al español).
+      </p>
+      <p class="mb-0">Fotografías proporcionadas por el autor de la monografía.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
